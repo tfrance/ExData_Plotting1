@@ -33,6 +33,7 @@ loadEnvironment <- function() {
   
   # subset the days of interest:
   data <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007")
+  data$DateTime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
   
   # save the data to disk (to be used by subsequent scripts)
   save(data, file="./data/data.Rda")

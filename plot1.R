@@ -6,5 +6,5 @@ if (!file.exists("./data/data.Rda")) {
 load("./data/data.Rda")
 
 png("./figure/plot1.png")
-with(data, hist(Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)"))
+with(data, hist(data$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)"))
 dev.off()
