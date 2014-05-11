@@ -1,10 +1,4 @@
 loadEnvironment <- function() {
-
-#   if ("M3" %in% rownames(installed.packages) == FALSE) {
-#     install.packages("M3")
-#   }
-#   
-#   require("M3")
   
   # ensure directory "data"
   if (!file.exists("data")) {
@@ -27,9 +21,6 @@ loadEnvironment <- function() {
                           na.strings="?",
                           colClasses=c("factor", "character", "numeric", "numeric", 
                                        "numeric", "numeric", "numeric", "numeric", "numeric"))
-  
-  # use the M3 package to combine the date and time fields into a single new field called "DateTime"
-  # powerData$DateTime <- combine.date.and.time(date=as.Date(powerData$Date), time=powerData$Time)
   
   # subset the days of interest:
   data <- subset(data, data$Date == "1/2/2007" | data$Date == "2/2/2007")
