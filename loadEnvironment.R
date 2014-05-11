@@ -1,3 +1,13 @@
+########################################################################
+# Function: loadEnvironment.R
+# Description: Downloads project data, sets directories and env
+#              for use by other scripts
+# Use: source("loadEnvironment.R")
+#      loadEnvironment()
+#
+# Author:tfrance
+#######################################################################
+
 loadEnvironment <- function() {
   
   # ensure directory "data"
